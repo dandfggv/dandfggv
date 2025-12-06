@@ -1,202 +1,80 @@
-#include <iostream>
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
+<h1 align="center">🐉 Welcome to the Realm of Snehith 🐉</h1>
+<p align="center">
+  <b>Developer • Creator • Builder of Digital Beasts</b><br>
+  Crafting languages, IDEs, tools, and chaos since day one.
+</p>
 
-const GLuint WIDTH = 800, HEIGHT = 600;
+---
 
-// Shader code
-const char* vertexShaderSource = R"(
-#version 330 core
-layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aColor;
-out vec3 vertexColor;
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 projection;
-void main()
-{
-    gl_Position = projection * view * model * vec4(aPos, 1.0f);
-    vertexColor = aColor;
-}
-)";
+## ⚡ About Me
+- 🧠 Self‑taught developer  
+- 🐲 Creator of **DexLang** — a custom programming language  
+- 🖥️ Builder of **DexIDE** — a full GUI IDE  
+- 🔥 Loves making tools, engines, and systems from scratch  
+- 🎮 Enjoys coding games, interpreters, and weird experiments  
+- 🚀 Always leveling up  
 
-const char* fragmentShaderSource = R"(
-#version 330 core
-in vec3 vertexColor;
-out vec4 FragColor;
-void main()
-{
-    FragColor = vec4(vertexColor, 1.0f);
-}
-)";
+---
 
-// Function to compile shaders
-GLuint compileShader(const char* source, GLenum shaderType) {
-    GLuint shader = glCreateShader(shaderType);
-    glShaderSource(shader, 1, &source, NULL);
-    glCompileShader(shader);
+## 🛠️ Tech Arsenal
+### 💻 Languages
+- Java ☕  
+- Python 🐍  
+- JavaScript ⚡  
+- C / C++ 🧨  
+- DexLang 🐉 (my own language)
 
-    GLint success;
-    GLchar infoLog[512];
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        glGetShaderInfoLog(shader, 512, NULL, infoLog);
-        std::cout << "Shader compilation failed\n" << infoLog << std::endl;
-    }
+### 🧰 Tools & Skills
+- Building interpreters  
+- Designing IDEs  
+- GUI development  
+- Game logic  
+- CLI tools  
+- Reverse engineering  
+- Problem solving like a beast 🦾  
 
-    return shader;
-}
+---
 
-// Function to create and link the shader program
-GLuint createShaderProgram() {
-    GLuint vertexShader = compileShader(vertexShaderSource, GL_VERTEX_SHADER);
-    GLuint fragmentShader = compileShader(fragmentShaderSource, GL_FRAGMENT_SHADER);
+## 🐉 My Creations
 
-    GLuint shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
+### 🔥 **DexLang**
+A tiny but powerful programming language built from scratch.
 
-    GLint success;
-    GLchar infoLog[512];
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if (!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cout << "Shader program linking failed\n" << infoLog << std::endl;
-    }
+### 🖥️ **DexIDE**
+A full custom IDE with:
+- Build system  
+- Run system  
+- Dump logs  
+- Project folders  
+- Clean UI  
 
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
+### 🎮 Mini Projects
+- Console games  
+- Snake in DexLang  
+- Tools & utilities  
+- Experiments that shouldn’t exist but do  
 
-    return shaderProgram;
-}
+---
 
-int main() {
-    // Initialize GLFW
-    if (!glfwInit()) {
-        std::cerr << "GLFW Initialization failed" << std::endl;
-        return -1;
-    }
+## 📊 GitHub Stats (Beast Mode)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight" height="165">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight" height="165">
+</p>
 
-    // Create GLFW window
-    GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "3D Game - C++ OpenGL", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Window creation failed" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
+---
 
-    // Set the current OpenGL context
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, [](GLFWwindow* window, int width, int height) {
-        glViewport(0, 0, width, height);
-    });
+## 🐲 Motto
+> “Build what doesn’t exist. Break what shouldn’t exist.  
+> Create like a beast.”
 
-    // Initialize GLEW
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "GLEW Initialization failed" << std::endl;
-        return -1;
-    }
+---
 
-    // Define the vertices of the cube
-    GLfloat vertices[] = {
-        // Positions          // Colors
-        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-        -0.5f,  0.5f, -0.5f,  1.0f, 1.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,
+## 🔥 Connect With Me
+- 💬 Discord: **YOUR_DISCORD_TAG**
+- 📧 Email: **YOUR_EMAIL**
+- 🌐 Website (soon): **Coming soon…**
 
-        -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
+---
 
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 0.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-
-        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f,
-         0.5f, -0.5f, -0.5f,  0.0f, 1.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,  0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,  1.0f, 0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,  1.0f, 0.0f, 0.0f
-    };
-
-    GLuint VAO, VBO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-
-    glBindVertexArray(VAO);
-
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
-    glEnableVertexAttribArray(0);
-
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
-    glEnableVertexAttribArray(1);
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
-
-    GLuint shaderProgram = createShaderProgram();
-
-    // Projection and view matrices
-    glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)WIDTH / (float)HEIGHT, 0.1f, 100.0f);
-    glm::mat4 view = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
-    
-    // Transformation matrices
-    glm::mat4 model = glm::mat4(1.0f);
-
-    while (!glfwWindowShouldClose(window)) {
-        glfwPollEvents();
-
-        // Render
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        glEnable(GL_DEPTH_TEST);
-
-        glUseProgram(shaderProgram);
-
-        GLuint modelLoc = glGetUniformLocation(shaderProgram, "model");
-        GLuint viewLoc = glGetUniformLocation(shaderProgram, "view");
-        GLuint projectionLoc = glGetUniformLocation(shaderProgram, "projection");
-
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
-
-        // Rotate the cube for animation
-        model = glm::rotate(model, glm::radians(0.1f), glm::vec3(1.0f, 1.0f, 0.0f));
-
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
-
-        glfwSwapBuffers(window);
-    }
-
-    glfwTerminate();
-    return 0;
-}
+<h3 align="center">⚔️ Stay Beast. Stay Building. ⚔️</h3>
