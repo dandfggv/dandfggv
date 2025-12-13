@@ -58,8 +58,8 @@ A full custom IDE with:
 
 ## 📊 GitHub Stats (Beast Mode)
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight" height="165">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight" height="165">
+  <img src="https://github-readme-stats.vercel.app/api?username=dandfggv&show_icons=true&theme=tokyonight" height="165">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dandfggv&layout=compact&theme=tokyonight" height="165">
 </p>
 
 ---
@@ -71,8 +71,8 @@ A full custom IDE with:
 ---
 
 ## 🔥 Connect With Me
-- 💬 Discord: **YOUR_DISCORD_TAG**
-- 📧 Email: **YOUR_EMAIL**
+- 💬 Discord: **https://discord.gg/rjcZunJSY2**
+- 📧 Email: **dandusnehith9@gmail.com**
 - 🌐 Website (soon): **Coming soon…**
 
 ---
