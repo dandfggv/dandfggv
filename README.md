@@ -7,6 +7,7 @@
 ---
 
 ## ⚡ About Me
+-🖥 Mc mod developer 
 - 🧠 Self‑taught developer  
 - 🐲 Creator of **DexLang** — a custom programming language  
 - 🖥️ Builder of **DexIDE** — a full GUI IDE  
