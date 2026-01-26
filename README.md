@@ -74,7 +74,7 @@ A full custom IDE with:
 ## 🔥 Connect With Me
 - 💬 Discord: **https://discord.gg/rjcZunJSY2**
 - 📧 Email: **dandusnehith9@gmail.com**
-- 🌐 Website (soon): **Coming soon…**
+- 🌐 Website: **https://dandfggv.github.io/dandfggv/**
 
 ---
 
