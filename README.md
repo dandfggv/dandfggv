@@ -77,7 +77,7 @@ A full custom IDE with:
 - 🌐 Website: **https://dandfggv.github.io/WebGithub/**
 
 ---
-Buy me a coffee pls
+**Buy me a coffee pls**
 
 **https://dandfggv.github.io/DonationWeb/**
 ---
